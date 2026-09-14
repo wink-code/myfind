@@ -32,6 +32,12 @@ def tree(tmp_path):
     sub = work_dir / "orange" / "subfolder"
     sub.mkdir(exist_ok=True, parents=True)
 
+    nested = tmp_path / "nested" / "apple"; nested.mkdir(parents=True)
+    (nested / "file99").write_text("deep")
+    (tmp_path / "nested" / "orange").mkdir(parents=True)
+    (tmp_path / "nested" / "orange" / "deep.html").write_text("deep")
+
+    
     c = ['.html', '.css', '.js']
     for i in range(3):
         (apple / f'file{i}').write_text(f'a{i}')

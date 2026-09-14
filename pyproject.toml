@@ -1,6 +1,6 @@
 [project]
 name = "myfind"
-version = "0.1.0"
+version = "0.1.1"
 description = "My find CLI tool to generate the list of files that satisfy the rule."
 readme = "README.md"
 license = "MIT"

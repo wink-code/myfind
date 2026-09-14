@@ -28,7 +28,7 @@ def find_matched_file_paths(patterns:Iterable[str],
 
     matched_file_paths = []
     for pattern in patterns:
-        for path in work_dir.rglob(pattern):
+        for path in work_dir.glob(pattern):
             # logger.info("%s matched", path)
             matched_file_paths.append(str(path.relative_to(work_dir)))
 
