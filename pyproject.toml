@@ -1,0 +1,28 @@
+[project]
+name = "myfind"
+version = "0.1.0"
+description = "My find CLI tool to generate the list of files that satisfy the rule."
+readme = "README.md"
+license = "MIT"
+authors = [
+    { name = "johnwink", email = "johnwink1998@gmail.com" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "pytest>=9.1.1",
+]
+
+[project.scripts]
+myfind = "myfind.cli:main"
+
+[build-system]
+requires = ["uv_build>=0.12.9,<0.13.0"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-name = "myfind"
+module-root = "src"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
