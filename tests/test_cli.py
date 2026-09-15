@@ -11,7 +11,7 @@ def tree(tmp_path):
     sub.mkdir(exist_ok=True, parents=True)
 
     pattern_path = work_dir / '.patterns'
-    patterns = ['*.py', '*.js', '*.css', '*.html', 'apple/*']
+    patterns = ['banana/*.py', 'orange/**/*.js', '# This is a comment.', 'orange/**/*.css', 'orange/**/*.html', 'apple/*']
     pattern_path.write_text('\n'.join(patterns))
 
     c = ['.html', '.css', '.js']
